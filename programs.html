@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treyvon Pearson | Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #101513;
+            color: #e8eee9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* HEADER */
+
+        header {
+            border-bottom: 1px solid #294138;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 1px 15px rgba(70, 170, 125, 0.08);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #aebbb4;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #62c598;
+        }
+
+
+        /* MAIN */
+
+        main {
+            width: 84%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        /* PAGE INTRO */
+
+        .page-intro {
+            min-height: 500px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            border-bottom: 1px solid #294138;
+        }
+
+        .small-title {
+            color: #62c598;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .page-intro h1 {
+            font-size: 64px;
+            margin: 18px 0;
+
+            letter-spacing: -3px;
+        }
+
+        .page-intro p {
+            color: #aebbb4;
+
+            font-size: 19px;
+            line-height: 1.8;
+
+            max-width: 720px;
+        }
+
+
+        /* PROJECT SECTION */
+
+        .project-section {
+            padding: 100px 0;
+
+            border-bottom: 1px solid #294138;
+        }
+
+
+        /* PROJECT HEADER */
+
+        .project-header {
+            margin-bottom: 60px;
+        }
+
+        .project-header h2 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .project-header p {
+            color: #aebbb4;
+
+            font-size: 17px;
+            line-height: 1.8;
+
+            max-width: 800px;
+        }
+
+
+        /* PROJECT CONTENT */
+
+        .project-content {
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+
+        /* DESCRIPTION */
+
+        .project-description h3 {
+            font-size: 27px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .project-description p {
+            color: #aebbb4;
+
+            font-size: 16px;
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* FEATURES */
+
+        .features {
+            margin-top: 40px;
+        }
+
+        .features h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .feature {
+            border-left: 2px solid #39785f;
+
+            padding: 5px 0 5px 20px;
+
+            margin-bottom: 20px;
+        }
+
+        .feature h4 {
+            margin: 0 0 7px;
+
+            font-size: 17px;
+        }
+
+        .feature p {
+            margin: 0;
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            color: #87968f;
+        }
+
+
+        /* PROJECT INFO */
+
+        .project-info {
+            background-color: #171e1b;
+
+            border: 1px solid #294138;
+
+            padding: 35px;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+
+            font-size: 24px;
+        }
+
+        .info-item {
+            padding: 18px 0;
+
+            border-bottom: 1px solid #294138;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            display: block;
+
+            color: #62c598;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 7px;
+        }
+
+        .info-value {
+            color: #c5cec9;
+
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+
+        /* GITHUB BUTTON */
+
+        .github-button {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 13px 20px;
+
+            background-color: #285b48;
+
+            border: 1px solid #39785f;
+
+            color: #e8eee9;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+            transition: 0.2s;
+        }
+
+        .github-button:hover {
+            background-color: #327058;
+
+            box-shadow: 0 0 18px rgba(98, 197, 152, 0.15);
+        }
+
+
+        /* CODE SECTION */
+
+        .code-section {
+            margin-top: 80px;
+        }
+
+        .code-section h3 {
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+        .code-section p {
+            color: #87968f;
+
+            line-height: 1.7;
+
+            max-width: 700px;
+        }
+
+        .code-box {
+            margin-top: 30px;
+
+            background-color: #0b0f0d;
+
+            border: 1px solid #294138;
+
+            padding: 30px;
+
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+
+            color: #aebbb4;
+
+            font-family: Consolas, Monaco, monospace;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* FUTURE PROJECT AREA */
+
+        .future-section {
+            padding: 100px 0;
+        }
+
+        .future-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .future-section p {
+            color: #87968f;
+
+            line-height: 1.7;
+
+            max-width: 700px;
+        }
+
+        .future-slot {
+            margin-top: 40px;
+
+            min-height: 250px;
+
+            border: 1px dashed #294138;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: #53635c;
+        }
+
+        .future-slot h3 {
+            color: #718079;
+            font-size: 22px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 8%;
+
+            color: #718079;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 13px;
+
+            border-top: 1px solid #294138;
+        }
+
+        footer a {
+            color: #62c598;
+            text-decoration: none;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-intro {
+                min-height: 400px;
+            }
+
+            .page-intro h1 {
+                font-size: 45px;
+            }
+
+            .project-header h2 {
+                font-size: 38px;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h2>
+            Treyvon Pearson
+        </h2>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="programs.html">
+                Programs
+            </a>
+
+            <a href="networking.html">
+                Networking
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-intro">
+
+            <div class="small-title">
+                PROGRAMMING
+            </div>
+
+            <h1>
+                Programs & Software
+            </h1>
+
+            <p>
+                This page contains software and programming projects
+                I've worked on. Each project represents something
+                I built while learning how different systems work
+                and experimenting with my own ideas.
+            </p>
+
+        </section>
+
+
+        <!-- ECONOMIC EMPIRES -->
+
+        <section class="project-section">
+
+
+            <div class="project-header">
+
+                <div class="small-title">
+                    PROJECT 01 · PYTHON
+                </div>
+
+                <h2>
+                    Economic Empires
+                </h2>
+
+                <p>
+                    Economic Empires is a turn-based economic strategy
+                    game built in Python. The project focuses on
+                    managing a nation's economy through buildings,
+                    resources, population, taxation, production,
+                    investments, and infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="project-content">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="project-description">
+
+                    <h3>
+                        About the Project
+                    </h3>
+
+                    <p>
+                        I created Economic Empires as an experiment
+                        in building a larger game system using Python.
+                        Instead of making every part of the game work
+                        independently, I designed different classes
+                        that interact with the player's overall
+                        statistics.
+                    </p>
+
+                    <p>
+                        The player begins with a set amount of money
+                        and can use it to develop their country.
+                        Buildings can change things such as population
+                        growth, trade efficiency, production capacity,
+                        and the number of available building plots.
+                    </p>
+
+                    <p>
+                        The game also includes different population
+                        groups with their own characteristics. Taxes
+                        can affect population weariness, while
+                        investments can change economic production
+                        and population growth.
+                    </p>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="features">
+
+                        <h3>
+                            What I Built
+                        </h3>
+
+
+                        <div class="feature">
+
+                            <h4>
+                                Economic System
+                            </h4>
+
+                            <p>
+                                A player economy that tracks money,
+                                investments, production, trade
+                                efficiency, and population growth.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <h4>
+                                Building System
+                            </h4>
+
+                            <p>
+                                Farms, factories, highways, and
+                                infrastructure affect different
+                                parts of the player's economy.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <h4>
+                                Resource Production
+                            </h4>
+
+                            <p>
+                                Resources can be assigned production
+                                slots and generate money each turn
+                                based on their production.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <h4>
+                                Population System
+                            </h4>
+
+                            <p>
+                                Different population groups have
+                                individual tax rates, happiness,
+                                populations, revenue, and weariness.
+                            </p>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <h4>
+                                Turn-Based Gameplay
+                            </h4>
+
+                            <p>
+                                Each turn updates the country's
+                                economy and gives the player new
+                                decisions to make.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="project-info">
+
+                    <h3>
+                        Project Information
+                    </h3>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            LANGUAGE
+                        </span>
+
+                        <span class="info-value">
+                            Python
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            TYPE
+                        </span>
+
+                        <span class="info-value">
+                            Strategy / Economic Simulation
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            STATUS
+                        </span>
+
+                        <span class="info-value">
+                            In Development
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            SYSTEMS
+                        </span>
+
+                        <span class="info-value">
+                            Economy, Resources, Population,
+                            Buildings, Taxation, Investments
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-label">
+                            SKILLS USED
+                        </span>
+
+                        <span class="info-value">
+                            Python Classes, Objects, Functions,
+                            Loops, Conditionals, Game Logic
+                        </span>
+
+                    </div>
+
+
+                    <a class="github-button" href="https://github.com/TreyvoPrime" target="_blank">
+                        View GitHub ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CODE -->
+
+            <div class="code-section">
+
+                <h3>
+                    Example From the Project
+                </h3>
+
+                <p>
+                    One part of the project uses a PlayerStats class
+                    to keep track of the player's economic state.
+                </p>
+
+
+                <div class="code-box">
+
+                    <pre>
+class PlayerStats:
+
+    def __init__(self):
+
+        self.playermoney = 25000
+        self.gdp_ratio_to_trade = 0.3
+        self.gdp_domestic = 0.7
+
+        self.starting_max_build_limit = 5
+        self.base_pop_growth = 0.03
+
+        self.playerpop_growth = self.base_pop_growth
+        self.playertradeEF = 0.20
+
+        self.playerbuild_limit = 5
+        self.playerbuildings = 0
+
+        self.playerproduction_slots = 10
+        self.playerproduction_allocation = 0
+</pre>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- FUTURE PROJECTS -->
+
+        <section class="future-section">
+
+            <div class="small-title">
+                MORE PROJECTS
+            </div>
+
+            <h2>
+                More projects will be added here.
+            </h2>
+
+            <p>
+                This space can be used for the next programming
+                project I decide to add to the portfolio.
+            </p>
+
+
+            <div class="future-slot">
+
+                <div>
+
+                    <div class="small-title">
+                        OPEN PROJECT SLOT
+                    </div>
+
+                    <h3>
+                        Future Project
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <span>
+            © 2026 Treyvon Pearson
+        </span>
+
+        <a href="https://github.com/TreyvoPrime" target="_blank">
+            GitHub ↗
+        </a>
+
+    </footer>
+
+
+</body>
+
+</html>

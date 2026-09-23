@@ -1,11 +1,495 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    ```
+    <title>Treyvon Pearson | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #101513;
+            color: #e8eee9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            border-bottom: 1px solid #294138;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 15px rgba(70, 170, 125, 0.08);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #aebbb4;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #62c598;
+        }
+
+        main {
+            width: 84%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro {
+            min-height: 620px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            align-items: center;
+            gap: 80px;
+            border-bottom: 1px solid #294138;
+        }
+
+        .intro h1 {
+            font-size: 65px;
+            margin: 10px 0;
+            letter-spacing: -3px;
+        }
+
+        .intro h1 span {
+            color: #62c598;
+        }
+
+        .intro p {
+            color: #aebbb4;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 650px;
+        }
+
+        .small-title {
+            color: #62c598;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .button {
+            padding: 12px 20px;
+            border: 1px solid #365449;
+            border-radius: 4px;
+            color: #e8eee9;
+            text-decoration: none;
+            background-color: #171e1b;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            border-color: #62c598;
+            box-shadow: 0 0 18px rgba(98, 197, 152, 0.15);
+        }
+
+        .button.main-button {
+            background-color: #285b48;
+            border-color: #39785f;
+        }
+
+        .photo-area {
+            text-align: center;
+        }
+
+        .photo-area img {
+            width: 280px;
+            height: 340px;
+            object-fit: cover;
+            border: 1px solid #3c765e;
+            box-shadow: 0 0 30px rgba(98, 197, 152, 0.12);
+        }
+
+        .photo-placeholder {
+            width: 280px;
+            height: 340px;
+            margin: auto;
+            border: 1px solid #3c765e;
+            background-color: #171e1b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64756d;
+            box-shadow: 0 0 30px rgba(98, 197, 152, 0.08);
+        }
+
+        section {
+            padding: 90px 0;
+            border-bottom: 1px solid #294138;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about p {
+            color: #aebbb4;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .interest-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .interest {
+            background-color: #171e1b;
+            border: 1px solid #294138;
+            padding: 20px;
+            transition: 0.2s;
+        }
+
+        .interest:hover {
+            border-color: #39785f;
+            box-shadow: 0 0 18px rgba(98, 197, 152, 0.08);
+        }
+
+        .interest h3 {
+            margin-top: 0;
+        }
+
+        .interest p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .pages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .page-card {
+            padding: 30px;
+            background-color: #171e1b;
+            border: 1px solid #294138;
+            text-decoration: none;
+            color: #e8eee9;
+            transition: 0.2s;
+        }
+
+        .page-card:hover {
+            border-color: #62c598;
+            transform: translateY(-3px);
+            box-shadow: 0 0 22px rgba(98, 197, 152, 0.1);
+        }
+
+        .page-card span {
+            color: #62c598;
+            font-size: 13px;
+        }
+
+        .page-card h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .page-card p {
+            color: #9daaa4;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 35px 8%;
+            color: #718079;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #62c598;
+            text-decoration: none;
+        }
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                padding: 70px 0;
+                gap: 40px;
+            }
+
+            .intro h1 {
+                font-size: 48px;
+            }
+
+            .photo-area {
+                order: -1;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pages {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    ```
+
 </head>
+
 <body>
-    <h1>Treyvon Pearson</h1>
+
+    ```
+    <header>
+
+        <h2>Treyvon Pearson</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="networking.html">Networking</a>
+            <a href="games.html">Games</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <div class="intro">
+
+            <div>
+
+                <div class="small-title">
+                    HIGH SCHOOL SENIOR · TECHNOLOGY
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Treyvon.</span>
+                </h1>
+
+                <p>
+                    I'm a high school senior interested in technology,
+                    programming, networking, and game development.
+                    This website is a collection of the things I've
+                    built, worked on, and learned along the way.
+                </p>
+
+                <div class="buttons">
+
+                    <a class="button main-button" href="programs.html">
+                        View My Work
+                    </a>
+
+                    <a class="button" href="https://github.com/TreyvoPrime" target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-area">
+
+                <!-- Replace this with your own photo -->
+                <img src="me.jpg" alt="Treyvon Pearson">
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT ME -->
+
+        <section>
+
+            <div class="small-title">
+                ABOUT ME
+            </div>
+
+            <h2>
+                Building things and figuring out how they work.
+            </h2>
+
+            <div class="about">
+
+                <p>
+                    I've always liked messing around with technology
+                    and seeing what I can make with it. Whether it's first attempting to make a game on Roblox to actually making my first program. 
+                    Many
+                    projects start as small ideas and eventually turn
+                    into much bigger projects as I keep experimenting
+                    with them.
+                </p>
+
+                <p>
+                    My interests have grown from game development into
+                    networking, computer systems, and software Development 
+                    I enjoy learning by actually
+                    building things instead of only reading about them trust the process.
+                </p>
+
+            </div>
+
+
+            <div class="interest-list">
+
+                <div class="interest">
+                    <h3>Programming</h3>
+                    <p>
+                        Software, tools, and other Programs I worked on to attempt to create something helpful.
+                    </p>
+                </div>
+
+                <div class="interest">
+                    <h3>Networking</h3>
+                    <p>
+                        Learning about networks, systems, infrastructure, implementations 
+                        and how computers communicate.
+                    </p>
+                </div>
+
+                <div class="interest">
+                    <h3>Game Development</h3>
+                    <p>
+                        Designing and developing games while experimenting
+                        with mechanics and ideas.
+                    </p>
+                </div>
+
+                <div class="interest">
+                    <h3>Technology</h3>
+                    <p>
+                        Exploring different technologies and figuring out
+                        how they can be used to build something useful.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OTHER PAGES -->
+
+        <section>
+
+            <div class="small-title">
+                MY WORK
+            </div>
+
+            <h2>
+                Explore the portfolio.
+            </h2>
+
+            <div class="pages">
+
+                <a class="page-card" href="programs.html">
+
+                    <span>01</span>
+
+                    <h3>Programs</h3>
+
+                    <p>
+                        Software, tools, and other Programs I worked on to attempt to create something helpful.
+                    </p>
+
+                </a>
+
+
+                <a class="page-card" href="networking.html">
+
+                    <span>02</span>
+
+                    <h3>Networking</h3>
+
+                    <p>
+                        Networking projects, IT work, systems,
+                        certifications, and labs.
+                    </p>
+
+                </a>
+
+
+                <a class="page-card" href="games.html">
+
+                    <span>03</span>
+
+                    <h3>Games</h3>
+
+                    <p>
+                        Games I've designed and developed, including
+                        the ideas and mechanics behind them.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            © 2026 Treyvon Pearson
+        </span>
+
+        <a href="https://github.com/TreyvoPrime" target="_blank">
+            GitHub ↗
+        </a>
+
+    </footer>
+    ```
+
 </body>
+
 </html>
